@@ -1,3 +1,30 @@
+<!DOCTYPE html>
 <html>
-STRONA STARTOWA
+  <head>
+    <title>Main Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+<div class = "container text-center">
+
+<h1>Please enter car details</h1>
+</div>
+    
+  
+    <div id="container">
+    	<form action="#" th:object="${car}" method="post" style="max-width: 600px; margin: auto;">
+    	<label>Car make</label>
+    	<input type="text" th:field="*{make}" class="form-control">
+    	<label>Car Model</label>
+    	<input type="text" th:field="*{carModel}" class="form-control">
+    	<label>Problem Description</label>
+    	<input type="text" th:field="*{problemDescription}" class="form-control">
+    	<button type="submit" class ="btn btn-primary">Send</button>
+                        
+    	</form>
+    </div>
+  </body>
 </html>
