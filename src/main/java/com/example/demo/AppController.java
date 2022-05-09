@@ -23,6 +23,7 @@ public class AppController {
 	
 	{
 		myRepo.save(car);
+	
 		return "index";
 		
 	}
