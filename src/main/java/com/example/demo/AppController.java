@@ -15,6 +15,7 @@ public class AppController {
 	public String showHome(Model model)
 	{
 		model.addAttribute("car", new Car());
+		
 		return "index";
 	}
 	@PostMapping("")
@@ -22,7 +23,7 @@ public class AppController {
 	
 	{
 		myRepo.save(car);
-		return "viewThem";
+		return "index";
 		
 	}
 	
