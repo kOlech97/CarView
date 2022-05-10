@@ -27,6 +27,12 @@ public class AppController {
 		return "index";
 		
 	}
+	@GetMapping("/viewThem")
+	
+	public String showCars()
+	{
+		return "viewThem";
+	}
 	
 
 }
