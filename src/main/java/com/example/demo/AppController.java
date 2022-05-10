@@ -29,14 +29,23 @@ public class AppController {
 		return "index";
 		
 	}
-	@GetMapping("/viewThem")
 	
+	@GetMapping("/viewThem")
 	public String showCars(Model model1)
 	{
 		List<Car> listCar = myRepo.findAll();
 		model1.addAttribute("listCar", listCar);
 		return "viewThem";
 	}
+	
+	@GetMapping("/tested")
+	public String showTested()
+	{
+		return "tested";
+	}
+	
+
+	
 	
 
 }

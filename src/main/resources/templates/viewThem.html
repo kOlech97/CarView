@@ -27,10 +27,17 @@
   				</thead>
   				<tbody>
   					<tr th:each="car: ${listCar}">
-  					<td th:text="${car.id}">Id</td>
-  					<td th:text="${car.carModel}">model</td>
-  					<td th:text="${car.make}">make</td>
-  					<td th:text="${car.problemDescription}">problem description</td>
+  					<td>
+  					<a th:href="@{/tested}" th:text="${car.id}" target="_blank" />
+  					</td>
+  					<td>
+  					<a th:href="@{/tested}" th:text="${car.carModel}" target="_blank" />
+  					</td><td>
+  					<a th:href="@{/tested}" th:text="${car.make}" target="_blank" />
+  					</td><td>
+  					<a th:href="@{/tested}" th:text="${car.problemDescription}" target="_blank" />
+  					</td>
+  					
   					</tr>
   				
   				</tbody>
