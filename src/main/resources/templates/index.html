@@ -11,10 +11,10 @@
 <div class = "container text-center">
 
 <h1>Please enter car details</h1>
-</div>
+
     
   
-    <div id="container">
+    
     	<form  th:object="${car}" method="post" style="max-width: 600px; margin: auto;">
     	<label>Car make</label>
     	<input type="text" th:field="*{make}" class="form-control">
@@ -23,9 +23,14 @@
     	<label>Problem Description</label>
     	<input type="text" th:field="*{problemDescription}" class="form-control">
     	<button type="submit" class ="btn btn-primary">Send</button>
+    	
                         
     	</form>
-    	 <a th:href="@{/viewThem}">Show Cars</a>
+    	<div id="viewer" style="margin-top: 50px;">
+    	<a th:href="@{/viewThem}">Show Cars</a>
+    	</div>
+    
+    	 
     </div>
    
   </body>
