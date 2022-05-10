@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import java.util.List;
+
 
 @Controller
 public class AppController {
@@ -29,8 +31,10 @@ public class AppController {
 	}
 	@GetMapping("/viewThem")
 	
-	public String showCars()
+	public String showCars(Model model1)
 	{
+		List<Car> listCar = myRepo.findAll();
+		model1.addAttribute("listCar", listCar);
 		return "viewThem";
 	}
 	
