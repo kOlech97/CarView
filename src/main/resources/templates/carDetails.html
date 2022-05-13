@@ -15,7 +15,7 @@
     
   	<div>
   			<table class="table table-striped table-bordered">
-  				<thead class="thead-dark">
+  			<thead class="thead-dark">
   					<tr>
   					<th>ID</th>
   					<th>model</th>
@@ -27,13 +27,11 @@
   				</thead>
   				<tbody>
   					<tr th:each="car: ${listCar}">
+  					<td th:text="${car.id}">g</td>
+                    <td th:text="${car.carModel}">E</td>
+                    <td th:text="${car.make}">First Na</td>
+                    <td th:text="${car.problemDescription}">Le</td>
   					
-  					<td>
-  					<a th:href="@{/tested}" th:text="${car.id}" target="_blank" />
-  					</td>
-                    <td th:text="${car.carModel}"></td>
-                    <td th:text="${car.make}"></td>
-                    <td th:text="${car.problemDescription}"></td>
   					
   					</tr>
   				
