@@ -29,7 +29,7 @@
   					<tr th:each="car: ${listCar}">
   					
   					<td>
-  					<a th:href="@{/tested}" th:text="${car.id}" target="_blank" />
+  					<a th:href="@{/tested/{id}(id=${car.id})}" th:text="${car.id}" target="_blank" />
   					</td>
                     <td th:text="${car.carModel}"></td>
                     <td th:text="${car.make}"></td>
