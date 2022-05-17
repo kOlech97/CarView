@@ -39,16 +39,17 @@ public class AppController {
 		return "viewThem";
 	}
 	
-	@GetMapping("/tested")
+	/*@GetMapping("/tested")
 	public String showTested()
 	{
 		return "tested";
 	}
-	
+	*/
 	@GetMapping("/tested/{id}")
-	public Car show(@PathVariable Long id)
+	public String show(@PathVariable Long id, Model model)
 	{
-		return myRepo.getById(id);
+		model.addAttribute("student", myRepo.findById(id));
+		return "tested";
 	}
 	
 
