@@ -13,7 +13,7 @@
 <h1>View cars</h1>
 
     
-  	<div><form th:action="@{/tested/{id} (id=${car.id})}" th:object = "${car}" method="POST">
+  	<div><form th:action="@{/tested/{id} (id=${car.id})}" th:object = "${car}" method="GET">
 						<div class ="form-group">
 							<label> Student First id </label>
 							<input
