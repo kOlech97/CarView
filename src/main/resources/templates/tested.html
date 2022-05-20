@@ -13,33 +13,46 @@
 <h1>View cars</h1>
 
     
-  	<div>
-  			<table class="table table-striped table-bordered">
-  				<thead class="thead-dark">
-  					<tr>
-  					<th>ID</th>
-  					<th>model</th>
-  					<th>make</th>
-  					<th>Problem Description</th>
-  					
-  					</tr>
-  				
-  				</thead>
-  				<tbody>
-  					
-  					
-  					
-  					
-  					<td th:text="${car{id}.id}"></td>
-                    <td th:text="${car{id}.carModel}"></td>
-                    <td th:text="${car{id}.make}"></td>
-                    <td th:text="${car{id}.problemDescription}"></td>
-  					
-  					
-  				
-  				</tbody>
-  			
-  			</table>
+  	<div><form th:action="@{/tested/{id} (id=${car.id})}" th:object = "${car}" method="POST">
+						<div class ="form-group">
+							<label> Student First id </label>
+							<input
+							type = "text"
+							name = "firstName"
+							th:field = "*{id}"
+							class = "form-control"
+							placeholder="Enter Student First Name" 
+							/>
+						</div>
+						
+						<div class ="form-group">
+							<label> Car model </label>
+							<input
+							type = "text"
+							name = "lastName"
+							th:field = "*{carModel}"
+							class = "form-control"
+							placeholder="Enter Student Last Name" 
+							/>
+						</div>
+						
+						<div class ="form-group">
+							<label> Make </label>
+							<input
+							type = "text"
+							name = "email"
+							th:field = "*{make}"
+							class = "form-control"
+							placeholder="Enter Student Email" 
+							/>
+						</div>
+						
+						<div class = "box-footer">
+							<button type="submit" class = "btn btn-primary">
+								Submit
+							</button>
+						</div>
+					</form>
   	</div>
     
     
